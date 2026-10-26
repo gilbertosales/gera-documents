@@ -1,0 +1,6 @@
+python-docx
+starlette
+uvicorn
+# keyring: usado só no acesso por API (chave guardada no cofre do sistema);
+# o modo assinatura (Claude Pro/Max) não precisa dele.
+keyring

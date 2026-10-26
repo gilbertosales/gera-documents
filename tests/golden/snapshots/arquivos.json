@@ -1,0 +1,437 @@
+{
+ "ancora.md": {
+  "achados": [],
+  "correcoes": [],
+  "v2": null
+ },
+ "checklist.md": {
+  "achados": [
+   [
+    "AVISO",
+    3,
+    "Checklist ([ ] / [x]) sai com os colchetes como texto."
+   ],
+   [
+    "AVISO",
+    4,
+    "Checklist ([ ] / [x]) sai com os colchetes como texto."
+   ]
+  ],
+  "correcoes": [
+   [
+    3,
+    "Checklist [ ]/[x] trocado por ☐/☑."
+   ],
+   [
+    4,
+    "Checklist [ ]/[x] trocado por ☐/☑."
+   ]
+  ],
+  "v2": "# T\n\n- ☐ pendente\n- ☑ feito\n"
+ },
+ "citacao_lista.md": {
+  "achados": [
+   [
+    "AVISO",
+    3,
+    "Lista/título dentro de citação (>) sai como texto literal."
+   ],
+   [
+    "AVISO",
+    4,
+    "Lista/título dentro de citação (>) sai como texto literal."
+   ]
+  ],
+  "correcoes": [
+   [
+    3,
+    "Lista/título dentro de citação convertido para texto (• item)."
+   ],
+   [
+    4,
+    "Lista/título dentro de citação convertido para texto (• item)."
+   ]
+  ],
+  "v2": "# T\n\n> • item na citação\n>\n> **título na citação**\n"
+ },
+ "codigo_aberto.md": {
+  "achados": [
+   [
+    "ERRO",
+    3,
+    "Bloco de código ``` aberto e nunca fechado — todo o resto do documento vira código."
+   ]
+  ],
+  "correcoes": [
+   [
+    4,
+    "Bloco de código ``` sem fechamento — fechado no fim do arquivo."
+   ]
+  ],
+  "v2": "# T\n\n```\ncódigo sem fim\n```\n"
+ },
+ "cp1252.md": {
+  "achados": [
+   [
+    "ERRO",
+    0,
+    "Arquivo não está em UTF-8 — o gerar_word.py falha ao ler."
+   ]
+  ],
+  "correcoes": [
+   [
+    0,
+    "Arquivo convertido para UTF-8."
+   ]
+  ],
+  "v2": "# Acentuação\n\nTexto em cp1252: ação, coração.\n"
+ },
+ "html.md": {
+  "achados": [
+   [
+    "AVISO",
+    3,
+    "HTML (<span>) sai como texto literal."
+   ]
+  ],
+  "correcoes": [
+   [
+    3,
+    "Tags HTML removidas (mantido o texto)."
+   ]
+  ],
+  "v2": "# T\n\nTexto com tag aqui.\n"
+ },
+ "imagem_inexistente.md": {
+  "achados": [
+   [
+    "ERRO",
+    3,
+    "Imagem não encontrada: img/nao_existe.png"
+   ]
+  ],
+  "correcoes": [],
+  "v2": null
+ },
+ "imagem_internet.md": {
+  "achados": [
+   [
+    "ERRO",
+    3,
+    "Imagem da internet (https://exemplo.com/logo.png) não é baixada — salve a imagem na pasta e aponte para o arquivo local."
+   ]
+  ],
+  "correcoes": [],
+  "v2": null
+ },
+ "imagem_no_meio.md": {
+  "achados": [
+   [
+    "ERRO",
+    3,
+    "Imagem no meio do texto não é inserida — sai como texto."
+   ]
+  ],
+  "correcoes": [
+   [
+    3,
+    "Imagem colocada sozinha numa linha (antes saía como texto)."
+   ]
+  ],
+  "v2": "# T\n\nVeja\n\n![ok](img/existe.png)\n\nno meio do texto.\n"
+ },
+ "italico_sublinhado.md": {
+  "achados": [
+   [
+    "AVISO",
+    3,
+    "_itálico_ com sublinhado não é suportado — o certo é *itálico*."
+   ]
+  ],
+  "correcoes": [
+   [
+    3,
+    "__negrito__/_itálico_ convertidos para **negrito**/*itálico*."
+   ]
+  ],
+  "v2": "# T\n\nTexto *ênfase* aqui.\n"
+ },
+ "links.md": {
+  "achados": [
+   [
+    "AVISO",
+    3,
+    "Link [texto](url) sai literal, com colchetes e URL."
+   ]
+  ],
+  "correcoes": [
+   [
+    3,
+    "Link [texto](url) convertido para texto (url)."
+   ]
+  ],
+  "v2": "# T\n\nVeja o site (https://exemplo.com) e a seção.\n"
+ },
+ "lista_4_espacos.md": {
+  "achados": [
+   [
+    "ERRO",
+    4,
+    "Sublista com 4+ espaços de recuo é colada no texto do item anterior."
+   ]
+  ],
+  "correcoes": [
+   [
+    4,
+    "Sublista com 4+ espaços ajustada para 3 espaços (vira item próprio no Word)."
+   ]
+  ],
+  "v2": "# T\n\n- item\n   - sub com 4 espaços\n"
+ },
+ "lista_mais.md": {
+  "achados": [
+   [
+    "ERRO",
+    3,
+    "Marcador \"+\" não é reconhecido — é colado no item anterior."
+   ]
+  ],
+  "correcoes": [
+   [
+    3,
+    "Marcador \"+\" trocado por \"-\"."
+   ]
+  ],
+  "v2": "# T\n\n- item com mais\n"
+ },
+ "lista_parenteses.md": {
+  "achados": [
+   [
+    "ERRO",
+    3,
+    "Lista numerada com \"1)\" não é reconhecida — o certo é \"1.\""
+   ],
+   [
+    "ERRO",
+    4,
+    "Lista numerada com \"1)\" não é reconhecida — o certo é \"1.\""
+   ]
+  ],
+  "correcoes": [
+   [
+    3,
+    "Numeração \"1)\" trocada por \"1.\""
+   ],
+   [
+    4,
+    "Numeração \"1)\" trocada por \"1.\""
+   ]
+  ],
+  "v2": "# T\n\n1. primeiro\n2. segundo\n"
+ },
+ "lista_tab.md": {
+  "achados": [
+   [
+    "ERRO",
+    4,
+    "Item de lista recuado com TAB não é reconhecido."
+   ]
+  ],
+  "correcoes": [
+   [
+    4,
+    "Recuo com TAB na lista trocado por espaços."
+   ],
+   [
+    4,
+    "Sublista com 4+ espaços ajustada para 3 espaços (vira item próprio no Word)."
+   ]
+  ],
+  "v2": "# T\n\n- item\n   - sub com tab\n"
+ },
+ "mermaid.md": {
+  "achados": [],
+  "correcoes": [],
+  "v2": null
+ },
+ "negrito_sublinhado.md": {
+  "achados": [
+   [
+    "AVISO",
+    3,
+    "__negrito__ com sublinhado não é suportado — o certo é **negrito**."
+   ]
+  ],
+  "correcoes": [
+   [
+    3,
+    "__negrito__/_itálico_ convertidos para **negrito**/*itálico*."
+   ]
+  ],
+  "v2": "# T\n\nTexto **forte** aqui.\n"
+ },
+ "nota_rodape.md": {
+  "achados": [
+   [
+    "AVISO",
+    3,
+    "Nota de rodapé [^n] não é suportada — sai como texto."
+   ]
+  ],
+  "correcoes": [],
+  "v2": null
+ },
+ "ok.md": {
+  "achados": [],
+  "correcoes": [],
+  "v2": null
+ },
+ "riscado.md": {
+  "achados": [
+   [
+    "AVISO",
+    3,
+    "~~riscado~~ não é suportado — sai com os ~~."
+   ]
+  ],
+  "correcoes": [
+   [
+    3,
+    "~~riscado~~ removido (mantido o texto)."
+   ]
+  ],
+  "v2": "# T\n\nTexto antigo novo.\n"
+ },
+ "sem_h1.md": {
+  "achados": [
+   [
+    "INFO",
+    0,
+    "Sem título \"# ...\" — a tela do gerar_word vai sugerir \"sem h1\" como nome do relatório."
+   ]
+  ],
+  "correcoes": [
+   [
+    0,
+    "Título \"# ...\" adicionado a partir do nome do arquivo."
+   ]
+  ],
+  "v2": "# sem h1\n\n## Só subtítulo\n\nTexto.\n"
+ },
+ "sub/interno.md": {
+  "achados": [
+   [
+    "AVISO",
+    3,
+    "~~riscado~~ não é suportado — sai com os ~~."
+   ]
+  ],
+  "correcoes": [
+   [
+    3,
+    "~~riscado~~ removido (mantido o texto)."
+   ]
+  ],
+  "v2": "# Interno\n\nTexto velho.\n"
+ },
+ "tabela_br.md": {
+  "achados": [
+   [
+    "AVISO",
+    5,
+    "<br> dentro de célula aparece como texto literal no Word."
+   ]
+  ],
+  "correcoes": [
+   [
+    5,
+    "<br> da célula trocado por \"; \"."
+   ]
+  ],
+  "v2": "# T\n\n| A | B |\n|---|---|\n| linha1; linha2 | x |\n"
+ },
+ "tabela_colunas.md": {
+  "achados": [
+   [
+    "ERRO",
+    5,
+    "Linha da tabela com 3 colunas, cabeçalho tem 2 — células ficam desalinhadas/vazias no Word."
+   ],
+   [
+    "ERRO",
+    6,
+    "Linha da tabela com 1 colunas, cabeçalho tem 2 — células ficam desalinhadas/vazias no Word."
+   ]
+  ],
+  "correcoes": [
+   [
+    5,
+    "Colunas a mais na linha da tabela foram ajustadas ao cabeçalho."
+   ],
+   [
+    6,
+    "Colunas faltando na linha da tabela foram completadas."
+   ]
+  ],
+  "v2": "# T\n\n| A | B |\n|---|---|\n| 1 | 2 3 |\n| 4 |  |\n"
+ },
+ "tabela_sem_separador.md": {
+  "achados": [
+   [
+    "AVISO",
+    3,
+    "Tabela sem a linha separadora (|---|---|) após o cabeçalho."
+   ]
+  ],
+  "correcoes": [
+   [
+    3,
+    "Linha separadora |---| adicionada após o cabeçalho da tabela."
+   ]
+  ],
+  "v2": "# T\n\n| A | B |\n|---|---|\n| 1 | 2 |\n"
+ },
+ "texto_apos_imagem.md": {
+  "achados": [
+   [
+    "AVISO",
+    3,
+    "Texto depois da imagem na mesma linha é descartado."
+   ]
+  ],
+  "correcoes": [
+   [
+    3,
+    "Imagem colocada sozinha numa linha (antes saía como texto)."
+   ]
+  ],
+  "v2": "# T\n\n![ok](img/existe.png)\n\nlegenda na mesma linha\n"
+ },
+ "titulo_nivel6.md": {
+  "achados": [
+   [
+    "AVISO",
+    3,
+    "Título ###### (nível 6) não é suportado — sai como texto com os #."
+   ]
+  ],
+  "correcoes": [
+   [
+    3,
+    "Título ###### rebaixado para #####."
+   ]
+  ],
+  "v2": "# T\n\n##### Nível seis\n"
+ },
+ "titulo_sem_espaco.md": {
+  "achados": [
+   [
+    "AVISO",
+    3,
+    "Título sem espaço após o # (ex.: \"##Título\") — sai como texto."
+   ]
+  ],
+  "correcoes": [],
+  "v2": null
+ }
+}

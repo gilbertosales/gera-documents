@@ -1,0 +1,4 @@
+# Só para rodar os testes (python -m pytest tests)
+-r requirements.txt
+pytest
+httpx2

@@ -1,0 +1,4 @@
+# T
+
+- [ ] pendente
+- [x] feito

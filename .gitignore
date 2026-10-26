@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+# configurações locais (pastas recentes, template, rodapé)
+gera_documents_config.json
+gerar_word_config.json
+# templates corporativos ficam fora do repositório
+*.dotx
+!modelos/*.dotx
+~$*
